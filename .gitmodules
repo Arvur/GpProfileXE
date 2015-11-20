@@ -1,0 +1,4 @@
+[submodule "lib/SynEdit"]
+	path = lib/SynEdit
+	url = git@github.com:SynEdit/SynEdit.git
+	branch = master

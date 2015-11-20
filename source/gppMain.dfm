@@ -1049,324 +1049,29 @@ object frmMain: TfrmMain
       Align = alBottom
       BevelOuter = bvNone
       TabOrder = 1
-      object mwSource: TmwCustomEdit
+      object mwSource: TSynEdit
         Left = 0
         Top = 0
         Width = 612
         Height = 121
-        Cursor = crIBeam
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
         Font.Name = 'Courier New'
         Font.Style = []
+        TabOrder = 0
+        Gutter.Font.Charset = DEFAULT_CHARSET
+        Gutter.Font.Color = clWindowText
+        Gutter.Font.Height = -11
+        Gutter.Font.Name = 'Courier New'
+        Gutter.Font.Style = []
         Gutter.Width = 0
-        HighLighter = mwPasSyn1
-        Keystrokes = <
-          item
-            ShortCut = 38
-            Command = ecUp
-          end
-          item
-            ShortCut = 8230
-            Command = ecSelUp
-          end
-          item
-            ShortCut = 16422
-            Command = ecScrollUp
-          end
-          item
-            ShortCut = 40
-            Command = ecDown
-          end
-          item
-            ShortCut = 8232
-            Command = ecSelDown
-          end
-          item
-            ShortCut = 16424
-            Command = ecScrollDown
-          end
-          item
-            ShortCut = 37
-            Command = ecLeft
-          end
-          item
-            ShortCut = 8229
-            Command = ecSelLeft
-          end
-          item
-            ShortCut = 16421
-            Command = ecWordLeft
-          end
-          item
-            ShortCut = 24613
-            Command = ecSelWordLeft
-          end
-          item
-            ShortCut = 39
-            Command = ecRight
-          end
-          item
-            ShortCut = 8231
-            Command = ecSelRight
-          end
-          item
-            ShortCut = 16423
-            Command = ecWordRight
-          end
-          item
-            ShortCut = 24615
-            Command = ecSelWordRight
-          end
-          item
-            ShortCut = 34
-            Command = ecPageDown
-          end
-          item
-            ShortCut = 8226
-            Command = ecSelPageDown
-          end
-          item
-            ShortCut = 16418
-            Command = ecPageBottom
-          end
-          item
-            ShortCut = 24610
-            Command = ecSelPageBottom
-          end
-          item
-            ShortCut = 33
-            Command = ecPageUp
-          end
-          item
-            ShortCut = 8225
-            Command = ecSelPageUp
-          end
-          item
-            ShortCut = 16417
-            Command = ecPageTop
-          end
-          item
-            ShortCut = 24609
-            Command = ecSelPageTop
-          end
-          item
-            ShortCut = 36
-            Command = ecLineStart
-          end
-          item
-            ShortCut = 8228
-            Command = ecSelLineStart
-          end
-          item
-            ShortCut = 16420
-            Command = ecEditorTop
-          end
-          item
-            ShortCut = 24612
-            Command = ecSelEditorTop
-          end
-          item
-            ShortCut = 35
-            Command = ecLineEnd
-          end
-          item
-            ShortCut = 8227
-            Command = ecSelLineEnd
-          end
-          item
-            ShortCut = 16419
-            Command = ecEditorBottom
-          end
-          item
-            ShortCut = 24611
-            Command = ecSelEditorBottom
-          end
-          item
-            ShortCut = 45
-            Command = ecToggleMode
-          end
-          item
-            ShortCut = 16429
-            Command = ecCopy
-          end
-          item
-            ShortCut = 8237
-            Command = ecPaste
-          end
-          item
-            ShortCut = 46
-            Command = ecDeleteChar
-          end
-          item
-            ShortCut = 8238
-            Command = ecCut
-          end
-          item
-            ShortCut = 8
-            Command = ecDeleteLastChar
-          end
-          item
-            ShortCut = 16392
-            Command = ecDeleteLastWord
-          end
-          item
-            ShortCut = 32776
-            Command = ecUndo
-          end
-          item
-            ShortCut = 40968
-            Command = ecRedo
-          end
-          item
-            ShortCut = 13
-            Command = ecLineBreak
-          end
-          item
-            ShortCut = 16449
-            Command = ecSelectAll
-          end
-          item
-            ShortCut = 16451
-            Command = ecCopy
-          end
-          item
-            ShortCut = 24649
-            Command = ecBlockIndent
-          end
-          item
-            ShortCut = 16461
-            Command = ecLineBreak
-          end
-          item
-            ShortCut = 16462
-            Command = ecInsertLine
-          end
-          item
-            ShortCut = 16468
-            Command = ecDeleteWord
-          end
-          item
-            ShortCut = 24661
-            Command = ecBlockUnindent
-          end
-          item
-            ShortCut = 16470
-            Command = ecPaste
-          end
-          item
-            ShortCut = 16472
-            Command = ecCut
-          end
-          item
-            ShortCut = 16473
-            Command = ecDeleteLine
-          end
-          item
-            ShortCut = 24665
-            Command = ecDeleteEOL
-          end
-          item
-            ShortCut = 16474
-            Command = ecUndo
-          end
-          item
-            ShortCut = 24666
-            Command = ecRedo
-          end
-          item
-            ShortCut = 16432
-            Command = ecGotoMarker0
-          end
-          item
-            ShortCut = 16433
-            Command = ecGotoMarker1
-          end
-          item
-            ShortCut = 16434
-            Command = ecGotoMarker2
-          end
-          item
-            ShortCut = 16435
-            Command = ecGotoMarker3
-          end
-          item
-            ShortCut = 16436
-            Command = ecGotoMarker4
-          end
-          item
-            ShortCut = 16437
-            Command = ecGotoMarker5
-          end
-          item
-            ShortCut = 16438
-            Command = ecGotoMarker6
-          end
-          item
-            ShortCut = 16439
-            Command = ecGotoMarker7
-          end
-          item
-            ShortCut = 16440
-            Command = ecGotoMarker8
-          end
-          item
-            ShortCut = 16441
-            Command = ecGotoMarker9
-          end
-          item
-            ShortCut = 24624
-            Command = ecSetMarker0
-          end
-          item
-            ShortCut = 24625
-            Command = ecSetMarker1
-          end
-          item
-            ShortCut = 24626
-            Command = ecSetMarker2
-          end
-          item
-            ShortCut = 24627
-            Command = ecSetMarker3
-          end
-          item
-            ShortCut = 24628
-            Command = ecSetMarker4
-          end
-          item
-            ShortCut = 24629
-            Command = ecSetMarker5
-          end
-          item
-            ShortCut = 24630
-            Command = ecSetMarker6
-          end
-          item
-            ShortCut = 24631
-            Command = ecSetMarker7
-          end
-          item
-            ShortCut = 24632
-            Command = ecSetMarker8
-          end
-          item
-            ShortCut = 24633
-            Command = ecSetMarker9
-          end>
-        LeftChar = 1
+        Highlighter = mwPasSyn1
         MaxUndo = 10
-        ParentColor = False
-        ParentFont = False
         ReadOnly = True
         RightEdge = 0
-        ScrollPastEOL = False
-        TabOrder = 0
-        TabIndent = 4
-        TopLine = 1
-        WantTabs = False
+        FontSmoothing = fsmNone
       end
     end
   end
@@ -3153,40 +2858,11 @@ object frmMain: TfrmMain
       FFFFFFFF00070000FFFFFFFF800F000000000000000000000000000000000000
       000000000000}
   end
-  object mwPasSyn1: TmwPasSyn
+  object mwPasSyn1: TSynPasSyn
     DefaultFilter = 'Pascal files (*.pas,*.inc)|*.PAS;*.INC'
-    AsmAttri.Background = clWindow
-    AsmAttri.Foreground = clWindowText
-    AsmAttri.Style = []
-    AsmAttri.IntegerStyle = 0
-    CommentAttri.Background = clWindow
-    CommentAttri.Foreground = clWindowText
-    CommentAttri.Style = [fsItalic]
-    CommentAttri.IntegerStyle = 2
-    IdentifierAttri.Background = clWindow
-    IdentifierAttri.Foreground = clWindowText
-    IdentifierAttri.Style = []
-    IdentifierAttri.IntegerStyle = 0
-    KeyAttri.Background = clWindow
-    KeyAttri.Foreground = clWindowText
-    KeyAttri.Style = [fsBold]
-    KeyAttri.IntegerStyle = 1
-    NumberAttri.Background = clWindow
-    NumberAttri.Foreground = clWindowText
-    NumberAttri.Style = []
-    NumberAttri.IntegerStyle = 0
-    SpaceAttri.Background = clWindow
-    SpaceAttri.Foreground = clWindowText
-    SpaceAttri.Style = []
-    SpaceAttri.IntegerStyle = 0
-    StringAttri.Background = clWindow
-    StringAttri.Foreground = clWindowText
-    StringAttri.Style = []
-    StringAttri.IntegerStyle = 0
-    SymbolAttri.Background = clWindow
-    SymbolAttri.Foreground = clWindowText
-    SymbolAttri.Style = []
-    SymbolAttri.IntegerStyle = 0
+    Options.AutoDetectEnabled = False
+    Options.AutoDetectLineLimit = 0
+    Options.Visible = False
     Left = 235
     Top = 134
   end

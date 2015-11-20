@@ -8,7 +8,7 @@ uses
   Registry, Messages, Classes, Forms, Windows, SysUtils, Graphics, Controls,
   Dialogs, StdCtrls, Menus, ComCtrls, GpParser, ExtCtrls, GpCheckLst, gpMRU,
   ActnList, ImgList, Buttons, ToolWin, gppResults, Grids,
-  gpArrowListView, mwPasSyn, mwCustomEdit, mwHighlighter, DProjUnit;
+  gpArrowListView, SynEdit, SynEditHighlighter, SynHighlighterPas, DProjUnit;
 
 const
   WM_ReloadProfile = WM_USER;
@@ -184,8 +184,8 @@ type
     Label1: TLabel;
     cbxSelectThreadClass: TComboBox;
     lvClasses: TGpArrowListView;
-    mwSource: TmwCustomEdit;
-    mwPasSyn1: TmwPasSyn;
+    mwSource: TSynEdit;
+    mwPasSyn1: TSynPasSyn;
     pnlBrowser: TPanel;
     ToolBar3: TToolBar;
     ToolButton18: TToolButton;
