@@ -35,10 +35,10 @@
     <DCC_MapFile>3</DCC_MapFile>
     <DCC_DebugInfoInExe>True</DCC_DebugInfoInExe>
     <DCC_DebugVN>True</DCC_DebugVN>
-    <DCC_UnitSearchPath>$(BDS)\Lib\Debug\Indy10;$(BDS)\lib\Debug;OutSources\EZDSL;OutSources\CastaliaDelphiParser;..\GPComponents\GPNative\source;..\lib\SynEdit\Source</DCC_UnitSearchPath>
-    <DCC_ResourcePath>$(BDS)\Lib\Debug\Indy10;$(BDS)\lib\Debug;OutSources\EZDSL;OutSources\CastaliaDelphiParser;..\GPComponents\GPNative\source;..\lib\SynEdit\Source</DCC_ResourcePath>
-    <DCC_ObjPath>$(BDS)\Lib\Debug\Indy10;$(BDS)\lib\Debug;OutSources\EZDSL;OutSources\CastaliaDelphiParser;..\GPComponents\GPNative\source;..\lib\SynEdit\Source</DCC_ObjPath>
-    <DCC_IncludePath>$(BDS)\Lib\Debug\Indy10;$(BDS)\lib\Debug;OutSources\EZDSL;OutSources\CastaliaDelphiParser;..\GPComponents\GPNative\source;..\lib\SynEdit\Source</DCC_IncludePath>
+    <DCC_UnitSearchPath>$(BDS)\Lib\Debug\Indy10;$(BDS)\lib\Debug;OutSources\EZDSL;OutSources\CastaliaDelphiParser;..\GPComponents\GPNative\source;..\lib\SynEdit\Source;..\lib\GpDelphiUnits\src</DCC_UnitSearchPath>
+    <DCC_ResourcePath>$(BDS)\Lib\Debug\Indy10;$(BDS)\lib\Debug;OutSources\EZDSL;OutSources\CastaliaDelphiParser;..\GPComponents\GPNative\source;..\lib\SynEdit\Source;..\lib\GpDelphiUnits\src</DCC_ResourcePath>
+    <DCC_ObjPath>$(BDS)\Lib\Debug\Indy10;$(BDS)\lib\Debug;OutSources\EZDSL;OutSources\CastaliaDelphiParser;..\GPComponents\GPNative\source;..\lib\SynEdit\Source;..\lib\GpDelphiUnits\src</DCC_ObjPath>
+    <DCC_IncludePath>$(BDS)\Lib\Debug\Indy10;$(BDS)\lib\Debug;OutSources\EZDSL;OutSources\CastaliaDelphiParser;..\GPComponents\GPNative\source;..\lib\SynEdit\Source;..\lib\GpDelphiUnits\src</DCC_IncludePath>
     <DCC_Define>xDebugPanels;DDP;xLogFEExecute;LogAccessFile;xLogParser;xLogRegister;xDebugParser;DEBUG</DCC_Define>
     <DCC_IntegerOverflowCheck>True</DCC_IntegerOverflowCheck>
     <DCC_SymbolReferenceInfo>2</DCC_SymbolReferenceInfo>

@@ -2,3 +2,7 @@
 	path = lib/SynEdit
 	url = git@github.com:SynEdit/SynEdit.git
 	branch = master
+[submodule "lib/GpDelphiUnits"]
+	path = lib/GpDelphiUnits
+	url = git@github.com:gabr42/GpDelphiUnits.git
+	branch = master
