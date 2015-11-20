@@ -69,6 +69,7 @@ uses
     case VarType(defval) of
       varInteger: Result := ReadInteger(name,defval);
       varBoolean: Result := ReadBool(name,defval);
+      varUString,
       varString : Result := ReadString(name,defval);
       varDate   : Result := ReadDate(name,defval);
       else raise Exception.Create('TGpRegistry.ReadVariant: Invalid value type!');
@@ -80,6 +81,7 @@ uses
     case VarType(value) of
       varInteger: WriteInteger(name,value);
       varBoolean: WriteBool(name,value);
+      varUString,
       varString : WriteString(name,value);
       varDate   : WriteDate(name,value);
       else raise Exception.Create('TGpRegistry.WriteVariant: Invalid value type!');
