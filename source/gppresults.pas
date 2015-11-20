@@ -197,41 +197,39 @@ const
 constructor TResults.Create;
 begin
   inherited Create;
-  try
-    SetLength(resThreads,1);
-    resThreads[0].teThread      := 0; // impossible handle
-    resThreads[0].teActiveProcs := nil;
-    resOldTicks        := -1;
-    resThreadBytes     := 1;
-    resCompressTicks   := false;
-    resCompressThreads := false;
-    resPrfVersion      := 0;
-    resPrfDigest       := false;
-    resPrfDigestVer    := 0;
-    resNullOverhead    := 0;
-    resNullError       := 0;
-    resNullErrorAcc    := 0;
-  except Fail; end;
+
+  SetLength(resThreads,1);
+  resThreads[0].teThread      := 0; // impossible handle
+  resThreads[0].teActiveProcs := nil;
+  resOldTicks        := -1;
+  resThreadBytes     := 1;
+  resCompressTicks   := false;
+  resCompressThreads := false;
+  resPrfVersion      := 0;
+  resPrfDigest       := false;
+  resPrfDigestVer    := 0;
+  resNullOverhead    := 0;
+  resNullError       := 0;
+  resNullErrorAcc    := 0;
 end; { TResults.Create }
 
 constructor TResults.Create(fileName: string; callback: TProgressCallback);
 begin
   Create();
+
+  resName := fileName;
+  resFile := TGpHugeFile.CreateEx(resName,FILE_FLAG_SEQUENTIAL_SCAN+FILE_ATTRIBUTE_NORMAL);
+  resFile.ResetBuffered(1);
   try
-    resName := fileName;
-    resFile := TGpHugeFile.CreateEx(resName,FILE_FLAG_SEQUENTIAL_SCAN+FILE_ATTRIBUTE_NORMAL);
-    resFile.ResetBuffered(1);
-    try
-      LoadHeader;
-      if IsDigest then LoadDigest(callback)
-      else begin
-        LoadTables;
-        if Version > 2 then LoadCalibration;
-        LoadData(callback);
-        RecalcTimes;
-      end;
-    finally resFile.Free; end;
-  except Fail; end;
+    LoadHeader;
+    if IsDigest then LoadDigest(callback)
+    else begin
+      LoadTables;
+      if Version > 2 then LoadCalibration;
+      LoadData(callback);
+      RecalcTimes;
+    end;
+  finally resFile.Free; end;
 end; { TResults.Create }
 
 destructor TResults.Destroy;
