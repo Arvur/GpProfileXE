@@ -6,3 +6,6 @@
 	path = lib/GpDelphiUnits
 	url = git@github.com:gabr42/GpDelphiUnits.git
 	branch = master
+[submodule "lib/CastaliaDelphiParser"]
+	path = lib/CastaliaDelphiParser
+	url = git@github.com:jacobthurman/Castalia-Delphi-Parser.git
