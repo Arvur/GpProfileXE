@@ -12,3 +12,6 @@
 [submodule "lib/EZDSL"]
 	path = lib/EZDSL
 	url = git@github.com:jmbucknall/EZDSL.git
+[submodule "lib/OmniThreadLibrary"]
+	path = lib/OmniThreadLibrary
+	url = git@github.com:gabr42/OmniThreadLibrary.git
