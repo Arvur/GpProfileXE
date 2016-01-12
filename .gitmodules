@@ -9,3 +9,6 @@
 [submodule "lib/CastaliaDelphiParser"]
 	path = lib/CastaliaDelphiParser
 	url = git@github.com:jacobthurman/Castalia-Delphi-Parser.git
+[submodule "lib/EZDSL"]
+	path = lib/EZDSL
+	url = git@github.com:jmbucknall/EZDSL.git
