@@ -41,7 +41,7 @@ type
   TActiveProcList = class
   private
     aplList : array of TProcProxy;
-    aplCount: integer;
+    aplCount: Integer;
   public
     constructor Create;
     destructor  Destroy; override;
@@ -126,7 +126,7 @@ type
     resCalCounter     : integer;
     procedure   CalibrationStep(pkt1, pkt2: TResPacket);
     procedure   ExitProcPkt(pkt: TResPacket);
-    procedure   EnterProcPkt(pkt: TResPacket);
+    function EnterProcPkt(pkt: TResPacket): Boolean;
     procedure   LoadHeader;
     procedure   LoadTables;
     procedure   LoadCalibration;
@@ -151,7 +151,7 @@ type
     function    ThCreateLocate(thread: integer): integer;
     function    ThCreate(thread: integer): integer;
     function    ThLocate(thread: integer): integer;
-    procedure   EnterProc(proxy: TProcProxy; pkt: TResPacket);
+    function EnterProc(proxy: TProcProxy; pkt: TResPacket): Boolean;
     procedure   ExitProc(proxy,parent: TProcProxy; pkt: TResPacket);
     procedure   AllocCGEntry(i,j,threads: integer);
   public
@@ -389,13 +389,15 @@ var
   filesz  : int64;
   fpstart : int64;
   cnt     : integer;
+  rslt: Boolean;
 begin
   cnt      := 0;
   fpstart  := resFile.FilePos;
   filesz   := resFile.FileSize;
   lastPerc := -1;
   CheckTag(PR_STARTDATA);
-  while ReadPacket(pkt) do begin
+  rslt := True;
+  while rslt and ReadPacket(pkt) do begin
     Inc(cnt);
     if (cnt mod REPORT_EVERY) = 0 then begin
       Application.ProcessMessages;
@@ -410,7 +412,7 @@ begin
     with pkt do begin
       if rpTag = PR_ENTERPROC then begin
         // create new procedure proxy object
-        EnterProcPkt(pkt);
+        rslt := EnterProcPkt(pkt);
       end
       else if rpTag = PR_EXITPROC then begin
         // find last proxy object with matching prProcID in active procedure queue
@@ -423,12 +425,12 @@ begin
   end;
 end; { TResults.LoadData }
 
-procedure TResults.EnterProcPkt(pkt: TResPacket);
+function TResults.EnterProcPkt(pkt: TResPacket): Boolean;
 var
   proxy: TProcProxy;
 begin
   proxy := TProcProxy.Create(ThCreateLocate(pkt.rpThread),pkt.rpProcID);
-  EnterProc(proxy,pkt);
+  Result := EnterProc(proxy,pkt);
 end; { TResults.EnterProcPkt }
 
 procedure TResults.ExitProcPkt(pkt: TResPacket);
@@ -748,8 +750,10 @@ begin
   end; // for
 end; { TResults.RecalcTimes }
 
-procedure TResults.EnterProc(proxy: TProcProxy; pkt: TResPacket);
+function TResults.EnterProc(proxy: TProcProxy; pkt: TResPacket): Boolean;
 begin
+  Result := (proxy.ppProcID <= High(resProcedures));
+  if not Result then Exit;
   // update dead time in all active procedures
   // insert proxy object into active procedure queue
   // increment recursion level

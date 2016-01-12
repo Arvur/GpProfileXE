@@ -324,6 +324,10 @@ object frmMain: TfrmMain
         object tabInstrumentation: TTabSheet
           Caption = 'Instrumentation'
           ImageIndex = 16
+          ExplicitLeft = 0
+          ExplicitTop = 0
+          ExplicitWidth = 0
+          ExplicitHeight = 0
           object Splitter1: TSplitter
             Left = 129
             Top = 25
@@ -510,7 +514,6 @@ object frmMain: TfrmMain
                   Width = 145
                   Height = 21
                   Style = csDropDownList
-                  ItemHeight = 0
                   TabOrder = 0
                   OnChange = cbxSelectThreadProcChange
                 end
@@ -865,7 +868,6 @@ object frmMain: TfrmMain
                 Width = 145
                 Height = 21
                 Style = csDropDownList
-                ItemHeight = 0
                 TabOrder = 0
                 OnChange = cbxSelectThreadClassChange
               end
@@ -874,7 +876,7 @@ object frmMain: TfrmMain
                 Left = 4
                 Top = 32
                 Width = 587
-                Height = 201
+                Height = 198
                 Anchors = [akLeft, akTop, akRight, akBottom]
                 Columns = <
                   item
@@ -937,7 +939,6 @@ object frmMain: TfrmMain
                 Width = 145
                 Height = 21
                 Style = csDropDownList
-                ItemHeight = 0
                 TabOrder = 0
                 OnChange = cbxSelectThreadUnitChange
               end
@@ -945,7 +946,7 @@ object frmMain: TfrmMain
                 Left = 4
                 Top = 32
                 Width = 588
-                Height = 201
+                Height = 198
                 Anchors = [akLeft, akTop, akRight, akBottom]
                 Columns = <
                   item
@@ -999,7 +1000,7 @@ object frmMain: TfrmMain
                 Left = 4
                 Top = 32
                 Width = 589
-                Height = 204
+                Height = 201
                 Anchors = [akLeft, akTop, akRight, akBottom]
                 Columns = <
                   item
@@ -1462,7 +1463,7 @@ object frmMain: TfrmMain
     Left = 47
     Top = 134
     Bitmap = {
-      494C01011D001F00440010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01011D002100040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000008000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -2719,7 +2720,7 @@ object frmMain: TfrmMain
     Left = 47
     Top = 164
     Bitmap = {
-      494C010103000500440010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010103000500040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
