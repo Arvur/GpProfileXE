@@ -44,7 +44,6 @@ uses
   GpIFF;      
 
 {$R *.DFM}
-{$R BAGGAGE.RES}
 
 {$I HELP.INC}
 {$I BAGGAGE.INC} // IDD_WHATSNEW, IDD_OPENSOURCE

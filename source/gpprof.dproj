@@ -48,6 +48,7 @@
 			<DCC_Define>xDebugPanels;DDP;xLogFEExecute;LogAccessFile;xLogParser;xLogRegister;xDebugParser;RELEASE;$(DCC_Define)</DCC_Define>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<BRCC_OutputDir>..\DCU</BRCC_OutputDir>
 			<Version>7.0</Version>
 			<DCC_Alignment>1</DCC_Alignment>
 			<DCC_Optimize>False</DCC_Optimize>
@@ -124,6 +125,10 @@
 			<DelphiCompile Include="gpprof.dpr">
 				<MainSource>MainSource</MainSource>
 			</DelphiCompile>
+			<RcCompile Include="baggage.rc">
+				<ContainerId>RC</ContainerId>
+				<Form>baggage.res</Form>
+			</RcCompile>
 			<DCCReference Include="gppMain.pas">
 				<Form>frmMain</Form>
 			</DCCReference>

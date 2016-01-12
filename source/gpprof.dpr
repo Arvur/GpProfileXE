@@ -24,6 +24,8 @@ License
 
 program gpprof;
 
+{$R 'baggage.res' 'baggage.rc'}
+
 uses
   Forms,
   SysUtils,
